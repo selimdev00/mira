@@ -1,42 +1,42 @@
 [
   {
     "id": 1,
-    "title": "Pain au Cranberry",
-    "description": "A delightful spiral pastry filled with light French vanilla cream and studded with seasonal fruits.",
-    "price": 12,
-    "types": ["Pack of 2", "Pack of 4"],
+    "title": "Pain au Chocolat",
+    "description": "Buttery laminated dough folded around two batons of dark Valrhona chocolate.",
+    "price": 4.5,
+    "types": ["Single", "Box of 6"],
     "imageUrl": "/product-image-1.png"
   },
   {
     "id": 2,
-    "title": "Pain au Cranberry 2",
-    "description": "A delightful spiral pastry filled with light French vanilla cream and studded with seasonal fruits.",
-    "price": 15,
-    "types": ["Pack of 3", "Pack of 6"],
+    "title": "Croissant aux Amandes",
+    "description": "A day-baked croissant brushed with almond syrup, filled with frangipane, and dusted with sugar.",
+    "price": 5,
+    "types": ["Single", "Box of 4"],
     "imageUrl": "/product-image-2.png"
   },
   {
     "id": 3,
-    "title": "Pain au Cranberry 3",
-    "description": "A delightful spiral pastry filled with light French vanilla cream and studded with seasonal fruits.",
-    "price": 18,
-    "types": ["Pack of 1", "Pack of 5"],
+    "title": "Tarte aux Fraises",
+    "description": "Crisp sweet pastry shell, vanilla bean custard, and a crown of fresh strawberries.",
+    "price": 6.5,
+    "types": ["Slice", "Whole tart"],
     "imageUrl": "/product-image-1.png"
   },
   {
     "id": 4,
-    "title": "Pain au Cranberry 4",
-    "description": "A delightful spiral pastry filled with light French vanilla cream and studded with seasonal fruits.",
-    "price": 18,
-    "types": ["Pack of 1", "Pack of 5"],
+    "title": "Baguette Tradition",
+    "description": "Long-fermented crusty baguette with an open, chewy crumb and a deep golden crust.",
+    "price": 4,
+    "types": ["Single", "Half dozen"],
     "imageUrl": "/product-image-2.png"
   },
   {
     "id": 5,
-    "title": "Pain au Cranberry 4",
-    "description": "A delightful spiral pastry filled with light French vanilla cream and studded with seasonal fruits.",
-    "price": 18,
-    "types": ["Pack of 1", "Pack of 5"],
+    "title": "Eclair au Cafe",
+    "description": "Choux pastry piped with coffee pastry cream and finished in a glossy espresso glaze.",
+    "price": 5.5,
+    "types": ["Single", "Box of 6"],
     "imageUrl": "/product-image-1.png"
   }
 ]

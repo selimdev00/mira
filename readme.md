@@ -1,38 +1,35 @@
-# Bonjour 🇫🇷🥖🗼🥐🇪🇺🏰
+# Bonjour
 
-This is simple landing for bakery goods website, written in just HTML, CSS, Javascript 
+Landing page for a small French bakery, built in plain HTML, CSS, and JavaScript with Vite. No framework.
 
-✅ Pure HTML & CSS & Javascript 🌱 <br />
-✅ Pixel perfect desktop 💯 <br />
-✅ Build with vite 🚀 <br />
-✅ Deploy with docker 💪 <br />
+- Pure HTML, CSS, and vanilla JS (ES modules)
+- Fully responsive, from mobile to wide desktop
+- Accessible: keyboard-operable pack-size listbox, skip link, focus rings, live cart label, reduced-motion support
+- Drag-to-scroll product rail with per-item quantity and cart logic
+- Dockerised build
 
-Figma: https://www.figma.com/design/qND9KCcSyMWuPokt70cG9V/Test?node-id=0-53&t=XHdWIHjaSNc03jrE-0
+Figma reference: https://www.figma.com/design/qND9KCcSyMWuPokt70cG9V/Test?node-id=0-53
 
-<hr />
+## Development
 
-### Development
 ```bash
+npm install
 npm run dev
 ```
 
-### Production
+## Production
+
 ```bash
 npm run build && npm run preview
 ```
 
-or with docker (docker-compose required)
+Or with Docker:
 
 ```bash
-npm run docker
-```
-
-<hr />
-
-### Turn off docker container
-```bash
-npm run docker:down
+npm run docker      # up
+npm run docker:down # down
 ```
 
 ## Author
+
 selim <selimdev00@gmail.com>

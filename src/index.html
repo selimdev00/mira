@@ -3,36 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Baked Goods | Bonjour</title>
+    <title>Bonjour | French Bakery &amp; Patisserie</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <meta name="description" content="Serving Baked Goods Every Day" />
-    <meta name="keywords" content="baked goods, baked goods every day" />
+    <meta
+      name="description"
+      content="Bonjour is a corner French bakery serving croissants, tarts, and crusty bread baked by hand every morning."
+    />
+    <meta name="keywords" content="bakery, french pastries, croissant, patisserie, baked goods" />
+    <meta name="theme-color" content="#f9efe0" />
   </head>
 
   <body>
+    <a class="skip-link" href="#products">Skip to products</a>
+
     <header class="header">
       <div class="container font-lusitana">
         <div class="header__section">
-          <div class="header__logo">
-            <img src="./images/logo.png" alt="Logo" />
-          </div>
+          <a class="header__logo" href="#top" aria-label="Bonjour, home">
+            <img src="./images/logo.png" alt="" />
+          </a>
 
-          <nav>
-            <ul class="header__nav">
-              <li class="header__nav__item"><a href="#">Store</a></li>
-              <li class="header__nav__item"><a href="#">About</a></li>
-              <li class="header__nav__item"><a href="#">Shipping</a></li>
-              <li class="header__nav__item"><a href="#">Recipes</a></li>
-              <li class="header__nav__item"><a href="#">Blog</a></li>
+          <nav class="header__nav-wrap" aria-label="Primary">
+            <button
+              class="header__burger"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-nav"
+              aria-label="Open menu"
+            >
+              <span></span><span></span><span></span>
+            </button>
+
+            <ul id="primary-nav" class="header__nav">
+              <li class="header__nav__item"><a href="#products">Menu</a></li>
+              <li class="header__nav__item"><a href="#about">Our Story</a></li>
+              <li class="header__nav__item"><a href="#visit">Find Us</a></li>
             </ul>
           </nav>
         </div>
 
         <div class="header__section">
-          <button class="header__cart">
+          <button class="header__cart" type="button" aria-label="Shopping cart with 0 items">
             <span class="header__cart__inner">
               <svg
                 width="1em"
@@ -40,6 +54,7 @@
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <path
                   d="M6.00555 20C5.45504 20 4.98377 19.8042 4.59174 19.4125C4.19971 19.0208 4.0037 18.55 4.0037 18C4.0037 17.45 4.19971 16.9792 4.59174 16.5875C4.98377 16.1958 5.45504 16 6.00555 16C6.55606 16 7.02733 16.1958 7.41935 16.5875C7.81138 16.9792 8.0074 17.45 8.0074 18C8.0074 18.55 7.81138 19.0208 7.41935 19.4125C7.02733 19.8042 6.55606 20 6.00555 20ZM16.0148 20C15.4643 20 14.993 19.8042 14.601 19.4125C14.209 19.0208 14.0129 18.55 14.0129 18C14.0129 17.45 14.209 16.9792 14.601 16.5875C14.993 16.1958 15.4643 16 16.0148 16C16.5653 16 17.0366 16.1958 17.4286 16.5875C17.8206 16.9792 18.0166 17.45 18.0166 18C18.0166 18.55 17.8206 19.0208 17.4286 19.4125C17.0366 19.8042 16.5653 20 16.0148 20ZM5.15476 4L7.55698 9H14.5635L17.316 4H5.15476ZM4.20388 2H18.9675C19.3512 2 19.6431 2.17083 19.8433 2.5125C20.0435 2.85417 20.0519 3.2 19.8684 3.55L16.3151 9.95C16.1316 10.2833 15.8855 10.5417 15.5769 10.725C15.2683 10.9083 14.9305 11 14.5635 11H7.10657L6.00555 13H17.0157C17.2993 13 17.537 13.0958 17.7289 13.2875C17.9207 13.4792 18.0166 13.7167 18.0166 14C18.0166 14.2833 17.9207 14.5208 17.7289 14.7125C17.537 14.9042 17.2993 15 17.0157 15H6.00555C5.25486 15 4.68766 14.6708 4.30398 14.0125C3.92029 13.3542 3.90361 12.7 4.25393 12.05L5.60518 9.6L2.00185 2H1.00092C0.717329 2 0.47961 1.90417 0.287766 1.7125C0.095922 1.52083 0 1.28333 0 1C0 0.716667 0.095922 0.479167 0.287766 0.2875C0.47961 0.0958333 0.717329 0 1.00092 0H2.62743C2.81093 0 2.98609 0.05 3.15291 0.15C3.31973 0.25 3.44485 0.391667 3.52826 0.575L4.20388 2Z"
@@ -47,41 +62,31 @@
                 />
               </svg>
 
-              <span data-cart class="header__cart__badge">8</span>
+              <span data-cart class="header__cart__badge">0</span>
             </span>
           </button>
         </div>
       </div>
 
-      <button class="order-button">
+      <a class="order-button" href="#products">
         <span class="order-button__inner font-lusitana">Order now</span>
-      </button>
+      </a>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero">
         <div class="hero__noise"></div>
 
-        <div class="hero__bg-images">
+        <div class="hero__bg-images" aria-hidden="true">
           <img class="hero__bg-image" src="./images/hero-image-1.png" alt="" />
-          <img
-            class="hero__bg-image"
-            src="./images/hero-image-2.png"
-            alt=""
-            style="bottom: 0"
-          />
+          <img class="hero__bg-image" src="./images/hero-image-2.png" alt="" style="bottom: 0" />
           <img
             class="hero__bg-image"
             src="./images/hero-image-3.png"
             alt=""
             style="left: 54%; transform: translateX(-50%)"
           />
-          <img
-            class="hero__bg-image"
-            src="./images/hero-image-4.png"
-            alt=""
-            style="right: 0"
-          />
+          <img class="hero__bg-image" src="./images/hero-image-4.png" alt="" style="right: 0" />
           <img
             class="hero__bg-image"
             src="./images/hero-image-5.png"
@@ -90,22 +95,21 @@
           />
         </div>
 
-        <div class="section__content">
+        <div class="section__content" data-reveal>
           <p class="section__pre-title font-garamond">bonjour</p>
 
           <h1 class="section__title font-garamond">
-            Serving Baked Goods <b>Every Day</b>
+            Fresh French Pastries, <b>Baked Every Morning</b>
           </h1>
 
           <p class="section__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            We bake everything by hand before sunrise, using French butter,
+            stone-milled flour, and fruit from growers down the road. Come in for a
+            warm croissant, or order a box for the table.
           </p>
 
           <a href="#products">
-            <button class="hero__button">
+            <button class="hero__button" type="button">
               <span class="hero__button__text">Shop Now</span>
               <svg
                 class="text-primary"
@@ -114,14 +118,10 @@
                 viewBox="0 0 27 14"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g clip-path="url(#clip0_2001_5)">
-                  <path
-                    d="M0 7L24 7"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-miterlimit="10"
-                  />
+                  <path d="M0 7L24 7" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" />
                   <path
                     d="M18 15C18 15 20.9388 7.00003 27 7.00003C20.9388 7.00003 18 -1 18 -1"
                     stroke="currentColor"
@@ -140,64 +140,58 @@
         </div>
       </section>
 
-      <section class="follow-us">
-        <div class="section__content">
+      <section id="about" class="follow-us">
+        <div class="section__content" data-reveal>
           <p class="section__pre-title font-jost">patisserie</p>
 
-          <h1 class="section__title font-garamond">Lorem Ipsum</h1>
+          <h2 class="section__title font-garamond">Our Little Corner Bakery</h2>
 
           <p class="section__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            We opened on the corner in 2014 with one stone oven and a family recipe
+            for laminated dough. Every loaf and tart is still made in small batches,
+            so what you taste today was shaped by hand this morning.
           </p>
 
           <p class="section__text">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            Stop by for an espresso and a still-warm pain au chocolat, or call ahead
+            and we will have a box ready at the counter. No two mornings smell quite
+            the same.
           </p>
 
           <div class="follow-us__footer">
             <p class="follow-us__footer__text">Follow Us</p>
 
             <div class="follow-us__socials">
-              <a href="#">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Bonjour on Facebook"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <g clip-path="url(#clip0_0_106)">
                     <path
                       d="M6.32539 12.7824H8.95618V23.6129C8.95618 23.8267 9.12944 24 9.34327 24H13.8039C14.0177 24 14.191 23.8267 14.191 23.6129V12.8334H17.2153C17.4119 12.8334 17.5774 12.6859 17.5998 12.4905L18.0591 8.50328C18.0718 8.39357 18.037 8.28372 17.9636 8.20142C17.8901 8.11905 17.785 8.0719 17.6747 8.0719H14.1911V5.57249C14.1911 4.81905 14.5968 4.43698 15.397 4.43698C15.511 4.43698 17.6747 4.43698 17.6747 4.43698C17.8885 4.43698 18.0618 4.26364 18.0618 4.04988V0.389961C18.0618 0.176129 17.8885 0.00286452 17.6747 0.00286452H14.5357C14.5136 0.00178065 14.4644 0 14.3919 0C13.8473 0 11.9542 0.106916 10.4587 1.48266C8.8018 3.0072 9.03213 4.83259 9.08717 5.14908V8.07182H6.32539C6.11156 8.07182 5.93829 8.24508 5.93829 8.45892V12.3952C5.93829 12.6091 6.11156 12.7824 6.32539 12.7824Z"
-                      fill="#231F20"
+                      fill="currentColor"
                     />
                   </g>
                   <defs>
-                    <clipPath id="clip0_0_106">
-                      <rect width="24" height="24" fill="white" />
-                    </clipPath>
+                    <clipPath id="clip0_0_106"><rect width="24" height="24" fill="white" /></clipPath>
                   </defs>
                 </svg>
               </a>
-              <a href="#">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Bonjour on Instagram"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M23.9279 7.05255C23.8695 5.77519 23.6666 4.90287 23.3699 4.13968C23.0687 3.33895 22.5964 2.61366 21.9858 2.01418C21.3866 1.40369 20.6611 0.931098 19.8604 0.629709C19.097 0.33325 18.2249 0.130553 16.9475 0.0725133C15.6678 0.0139201 15.2589 0 12 0C8.7411 0 8.33223 0.0139199 7.05251 0.072144C5.77516 0.130553 4.90303 0.333434 4.13966 0.630064C3.33894 0.931282 2.61365 1.40369 2.01417 2.01418C1.40368 2.61348 0.931092 3.33877 0.629705 4.1395C0.333248 4.90287 0.130552 5.77519 0.0725129 7.05236C0.01392 8.33228 0 8.74097 0 11.9999C0 15.259 0.01392 15.6679 0.0725129 16.9476C0.130737 18.2248 0.333617 19.0972 0.630246 19.8605C0.931462 20.661 1.40387 21.3866 2.01434 21.9858C2.61365 22.5963 3.33912 23.0687 4.13984 23.3699C4.90303 23.6668 5.77534 23.8695 7.05268 23.9279C8.3326 23.9863 8.74129 24 12.0003 24C15.2592 24 15.668 23.9863 16.9478 23.9279C18.2251 23.8695 19.0972 23.6668 19.8605 23.3699C21.4724 22.7467 22.7467 21.4724 23.3699 19.8605C23.6668 19.0972 23.8695 18.2248 23.9279 16.9476C23.9862 15.6678 24 15.259 24 12.0001C24 8.74097 23.9862 8.33228 23.9279 7.05255ZM21.7678 16.8493C21.7145 18.0194 21.5189 18.6548 21.3547 19.0775C20.9509 20.1242 20.1239 20.9513 19.0773 21.3551C18.6544 21.5193 18.019 21.7148 16.849 21.7681C15.584 21.8259 15.2043 21.8381 12 21.8381C8.79549 21.8381 8.41609 21.8259 7.15083 21.7681C5.98097 21.7148 5.34559 21.5193 4.92262 21.3551C4.4015 21.1626 3.93 20.8559 3.54291 20.4573C3.14429 20.0701 2.83759 19.5989 2.64514 19.0775C2.4809 18.6548 2.28534 18.0194 2.23206 16.8493C2.17438 15.5841 2.16211 15.2044 2.16211 12.0003C2.16211 8.7959 2.17438 8.41651 2.23206 7.15106C2.28553 5.981 2.4809 5.34562 2.64514 4.92283C2.83759 4.40153 3.14448 3.93003 3.54291 3.54293C3.93 3.14431 4.4015 2.83761 4.9228 2.64534C5.34559 2.48091 5.98097 2.28554 7.15102 2.23208C8.41628 2.17439 8.79585 2.16212 12 2.16212C15.2041 2.16212 15.5836 2.17439 16.849 2.23226C18.019 2.28554 18.6543 2.48109 19.0773 2.64534C19.5984 2.83779 20.0699 3.1445 20.457 3.54293C20.8556 3.93003 21.1622 4.40153 21.3546 4.92283C21.5189 5.34562 21.7145 5.981 21.7678 7.15106C21.8255 8.41633 21.8378 8.7959 21.8378 12.0001C21.8378 15.2044 21.8257 15.5838 21.7678 16.8493ZM11.9995 5.83776C8.59622 5.83776 5.83736 8.59681 5.83736 12.0001C5.83736 15.4032 8.59622 18.1622 11.9995 18.1622C15.4029 18.1622 18.1617 15.4032 18.1617 12.0001C18.1617 8.59681 15.4029 5.83776 11.9995 5.83776ZM11.9995 16C9.79047 15.9998 7.99947 14.2091 7.99966 11.9998C7.99966 9.79079 9.79048 7.99989 11.9996 7.99989C14.2087 8.00007 15.9996 9.79079 15.9996 11.9998C15.9996 14.2091 14.2086 16 11.9995 16ZM18.4058 7.03434C19.2011 7.03434 19.8458 6.38962 19.8458 5.59439C19.8458 4.79897 19.2011 4.15426 18.4058 4.15426C17.6104 4.15426 16.9657 4.79897 16.9657 5.59439C16.9657 6.38962 17.6104 7.03434 18.4058 7.03434Z"
-                    fill="#231F20"
+                    fill="currentColor"
                   />
                 </svg>
               </a>
@@ -208,10 +202,42 @@
 
       <section id="products" class="products">
         <div class="container">
+          <h2 class="products__heading font-garamond" data-reveal>From the Counter</h2>
           <div class="products__slider"></div>
         </div>
       </section>
     </main>
+
+    <footer id="visit" class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <p class="footer__wordmark font-garamond">Bonjour</p>
+          <p class="footer__tagline">Baked by hand every morning since 2014.</p>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h3 class="footer__col__title font-lusitana">Visit</h3>
+            <p>14 Rue du Four<br />Old Town Corner</p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col__title font-lusitana">Hours</h3>
+            <p>Mon&ndash;Fri 7:00&ndash;19:00<br />Sat&ndash;Sun 8:00&ndash;16:00</p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col__title font-lusitana">Contact</h3>
+            <p>
+              <a href="tel:+10000000000">+1 (000) 000-0000</a><br />
+              <a href="mailto:bonjour@example.com">bonjour@example.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <p>&copy; 2026 Bonjour Bakery. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script type="module" src="./main.js"></script>
   </body>
